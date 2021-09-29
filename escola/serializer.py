@@ -31,6 +31,7 @@ class ListaMatriculasAlunoSerializer(serializers.ModelSerializer):
         model= Matricula
         fields = ['curso', 'periodo']
         #exclude = []
+    
     #Retorna a descrição do período do campo tipo choice
     def get_periodo(self, obj):
         return obj.get_periodo_display()
